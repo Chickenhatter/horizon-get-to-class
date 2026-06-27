@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ii24m7exwefq" path="res://code/character.gd" id="1_2gn6n"]
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_l0a5c"]
+[ext_resource type="Script" uid="uid://ddhb5d6cw035w" path="res://code/moving1.gd" id="3_4m780"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rpb1b"]
 radius = 21.0
@@ -25,6 +26,7 @@ size = Vector2(13, 269)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/character" unique_id=1174257859]
 position = Vector2(385, 507)
+platform_floor_layers = 0
 script = ExtResource("1_2gn6n")
 
 [node name="Icon" type="Sprite2D" parent="Node2D/character/CharacterBody2D" unique_id=60606033]
@@ -49,12 +51,27 @@ rotation = 0.0035304355
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/Node2D/Path2D/PathFollow2D" unique_id=1366225198]
 platform_floor_layers = 0
+script = ExtResource("3_4m780")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Node2D/Path2D/PathFollow2D/CharacterBody2D" unique_id=1704654837]
 position = Vector2(-3.5, 124.5)
 shape = SubResource("RectangleShape2D_ku5y5")
 
 [node name="Icon" type="Sprite2D" parent="Node2D/Node2D/Path2D/PathFollow2D/CharacterBody2D" unique_id=1282611516]
+position = Vector2(-3, 130)
+scale = Vector2(0.09374999, 2.1875)
+texture = ExtResource("2_l0a5c")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/Node2D" unique_id=1368067390]
+position = Vector2(243, 367)
+platform_floor_layers = 0
+script = ExtResource("3_4m780")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Node2D/CharacterBody2D" unique_id=541101642]
+position = Vector2(-3.5, 124.5)
+shape = SubResource("RectangleShape2D_ku5y5")
+
+[node name="Icon" type="Sprite2D" parent="Node2D/Node2D/CharacterBody2D" unique_id=329799821]
 position = Vector2(-3, 130)
 scale = Vector2(0.09374999, 2.1875)
 texture = ExtResource("2_l0a5c")

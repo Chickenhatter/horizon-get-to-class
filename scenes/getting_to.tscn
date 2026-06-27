@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ii24m7exwefq" path="res://code/character.gd" id="1_2gn6n"]
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_l0a5c"]
 [ext_resource type="Script" uid="uid://ddhb5d6cw035w" path="res://code/moving1.gd" id="3_4m780"]
+[ext_resource type="Script" uid="uid://c1r628slsblxt" path="res://code/classes_decider.gd" id="4_ku5y5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rpb1b"]
 radius = 21.0
@@ -16,6 +17,24 @@ point_count = 5
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ku5y5"]
 size = Vector2(13, 269)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xrwy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rpb1b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5m13b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nrcul"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spbo0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_plfo2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2ynx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_blw3f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7g8u7"]
+
 [node name="Node2D" type="Node2D" unique_id=1944338401]
 
 [node name="Node2D" type="Node2D" parent="." unique_id=936495232]
@@ -23,6 +42,7 @@ size = Vector2(13, 269)
 [node name="character" type="Node2D" parent="Node2D" unique_id=1100738879]
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D/character" unique_id=1884422781]
+visible = false
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/character" unique_id=1174257859]
 position = Vector2(385, 507)
@@ -40,38 +60,109 @@ shape = SubResource("CircleShape2D_rpb1b")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Node2D/character/CharacterBody2D" unique_id=357097519]
 
-[node name="Node2D" type="Node2D" parent="Node2D" unique_id=1781502234]
+[node name="Camera2D" type="Camera2D" parent="Node2D/character/CharacterBody2D" unique_id=2056227625]
 
-[node name="Path2D" type="Path2D" parent="Node2D/Node2D" unique_id=1999616336]
+[node name="people" type="Node2D" parent="Node2D" unique_id=1781502234]
+
+[node name="students" type="Path2D" parent="Node2D/people" unique_id=1999616336]
 curve = SubResource("Curve2D_4m780")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/Node2D/Path2D" unique_id=1386723021]
-position = Vector2(2, -1)
-rotation = 0.0035304355
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/people/students" unique_id=1386723021]
+position = Vector2(4.9673557, 317.67856)
+rotation = -1.573813
+progress = 3242.4343
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/Node2D/Path2D/PathFollow2D" unique_id=1366225198]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/people/students/PathFollow2D" unique_id=1366225198]
 platform_floor_layers = 0
 script = ExtResource("3_4m780")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Node2D/Path2D/PathFollow2D/CharacterBody2D" unique_id=1704654837]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/people/students/PathFollow2D/CharacterBody2D" unique_id=1704654837]
 position = Vector2(-3.5, 124.5)
 shape = SubResource("RectangleShape2D_ku5y5")
 
-[node name="Icon" type="Sprite2D" parent="Node2D/Node2D/Path2D/PathFollow2D/CharacterBody2D" unique_id=1282611516]
+[node name="Icon" type="Sprite2D" parent="Node2D/people/students/PathFollow2D/CharacterBody2D" unique_id=1282611516]
 position = Vector2(-3, 130)
 scale = Vector2(0.09374999, 2.1875)
 texture = ExtResource("2_l0a5c")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/Node2D" unique_id=1368067390]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/people" unique_id=1368067390]
 position = Vector2(243, 367)
 platform_floor_layers = 0
-script = ExtResource("3_4m780")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Node2D/CharacterBody2D" unique_id=541101642]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/people/CharacterBody2D" unique_id=541101642]
 position = Vector2(-3.5, 124.5)
 shape = SubResource("RectangleShape2D_ku5y5")
 
-[node name="Icon" type="Sprite2D" parent="Node2D/Node2D/CharacterBody2D" unique_id=329799821]
+[node name="Icon" type="Sprite2D" parent="Node2D/people/CharacterBody2D" unique_id=329799821]
 position = Vector2(-3, 130)
 scale = Vector2(0.09374999, 2.1875)
 texture = ExtResource("2_l0a5c")
+
+[node name="classes" type="Node2D" parent="Node2D" unique_id=2028233519]
+
+[node name="classes" type="Node2D" parent="Node2D/classes" unique_id=565763986]
+script = ExtResource("4_ku5y5")
+
+[node name="eng" type="Area2D" parent="Node2D/classes/classes" unique_id=430522881]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/classes/classes/eng" unique_id=355235066]
+shape = SubResource("RectangleShape2D_7xrwy")
+
+[node name="pe" type="Area2D" parent="Node2D/classes/classes" unique_id=1087509330]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/classes/classes/pe" unique_id=1400206552]
+shape = SubResource("RectangleShape2D_rpb1b")
+
+[node name="re" type="Area2D" parent="Node2D/classes/classes" unique_id=2085528008]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/classes/classes/re" unique_id=112957785]
+shape = SubResource("RectangleShape2D_5m13b")
+
+[node name="mat" type="Area2D" parent="Node2D/classes/classes" unique_id=1246068931]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/classes/classes/mat" unique_id=1011862154]
+shape = SubResource("RectangleShape2D_nrcul")
+
+[node name="csc" type="Area2D" parent="Node2D/classes/classes" unique_id=1723114902]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/classes/classes/csc" unique_id=1450275505]
+shape = SubResource("RectangleShape2D_spbo0")
+
+[node name="phy" type="Area2D" parent="Node2D/classes/classes" unique_id=751494408]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/classes/classes/phy" unique_id=1028511211]
+shape = SubResource("RectangleShape2D_plfo2")
+
+[node name="che" type="Area2D" parent="Node2D/classes/classes" unique_id=296019465]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/classes/classes/che" unique_id=218601183]
+shape = SubResource("RectangleShape2D_a2ynx")
+
+[node name="bio" type="Area2D" parent="Node2D/classes/classes" unique_id=1453405495]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/classes/classes/bio" unique_id=1294642238]
+shape = SubResource("RectangleShape2D_blw3f")
+
+[node name="sst" type="Area2D" parent="Node2D/classes/classes" unique_id=1919967737]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/classes/classes/sst" unique_id=1594474206]
+shape = SubResource("RectangleShape2D_7g8u7")
+
+[connection signal="body_entered" from="Node2D/classes/classes/eng" to="Node2D/classes/classes" method="_on_eng_body_entered"]
+[connection signal="body_exited" from="Node2D/classes/classes/eng" to="Node2D/classes/classes" method="_on_eng_body_exited"]
+[connection signal="body_entered" from="Node2D/classes/classes/pe" to="Node2D/classes/classes" method="_on_pe_body_entered"]
+[connection signal="body_exited" from="Node2D/classes/classes/pe" to="Node2D/classes/classes" method="_on_pe_body_exited"]
+[connection signal="body_entered" from="Node2D/classes/classes/re" to="Node2D/classes/classes" method="_on_re_body_entered"]
+[connection signal="body_exited" from="Node2D/classes/classes/re" to="Node2D/classes/classes" method="_on_re_body_exited"]
+[connection signal="body_entered" from="Node2D/classes/classes/mat" to="Node2D/classes/classes" method="_on_mat_body_entered"]
+[connection signal="body_exited" from="Node2D/classes/classes/mat" to="Node2D/classes/classes" method="_on_mat_body_exited"]
+[connection signal="body_entered" from="Node2D/classes/classes/csc" to="Node2D/classes/classes" method="_on_csc_body_entered"]
+[connection signal="body_exited" from="Node2D/classes/classes/csc" to="Node2D/classes/classes" method="_on_csc_body_exited"]
+[connection signal="body_entered" from="Node2D/classes/classes/phy" to="Node2D/classes/classes" method="_on_phy_body_entered"]
+[connection signal="body_exited" from="Node2D/classes/classes/phy" to="Node2D/classes/classes" method="_on_phy_body_exited"]
+[connection signal="body_entered" from="Node2D/classes/classes/che" to="Node2D/classes/classes" method="_on_che_body_entered"]
+[connection signal="body_exited" from="Node2D/classes/classes/che" to="Node2D/classes/classes" method="_on_che_body_exited"]
+[connection signal="body_entered" from="Node2D/classes/classes/bio" to="Node2D/classes/classes" method="_on_bio_body_entered"]
+[connection signal="body_exited" from="Node2D/classes/classes/bio" to="Node2D/classes/classes" method="_on_bio_body_exited"]
+[connection signal="body_entered" from="Node2D/classes/classes/sst" to="Node2D/classes/classes" method="_on_sst_body_entered"]
+[connection signal="body_exited" from="Node2D/classes/classes/sst" to="Node2D/classes/classes" method="_on_sst_body_exited"]

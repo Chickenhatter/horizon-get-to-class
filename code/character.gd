@@ -5,7 +5,6 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 var direct = "none"
 func _physics_process(delta: float) -> void:
-	$"../../Node2D/Path2D/PathFollow2D".progress_ratio += delta/100
 	var movement = Vector2.ZERO
 	if Input.is_action_pressed('ui_w'):
 		movement = Vector2.UP.rotated(deg_to_rad(rotation_degrees))

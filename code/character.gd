@@ -40,3 +40,6 @@ func _physics_process(delta: float) -> void:
 			move_and_collide(velocity * delta)
 		else:
 			velocity = push * original_speed
+	$Icon2.scale.x = (1.5*(sin((2*PI*($".".rotation_degrees+45)/180)))+4.5)
+	$Icon2.rotation_degrees = -$".".rotation_degrees
+	$Icon2/arrow.rotation_degrees = $".".rotation_degrees

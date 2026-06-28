@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://syf3nc5cg4yg"]
 
 [ext_resource type="Script" uid="uid://ii24m7exwefq" path="res://code/character.gd" id="1_2gn6n"]
+[ext_resource type="Texture2D" uid="uid://dhetnbigbagbg" path="res://assets/human/pixil-frame-0 (13).png" id="2_dak1h"]
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_l0a5c"]
 [ext_resource type="Script" uid="uid://ddhb5d6cw035w" path="res://code/moving1.gd" id="3_4m780"]
+[ext_resource type="Texture2D" uid="uid://celsot7yfnag4" path="res://assets/human/pixil-frame-0 (15).png" id="3_l6age"]
 [ext_resource type="Script" uid="uid://c1r628slsblxt" path="res://code/classes_decider.gd" id="4_ku5y5"]
 [ext_resource type="Script" uid="uid://dc4oih1orewkw" path="res://code/camera.gd" id="5_6viju"]
 
@@ -51,15 +53,29 @@ platform_floor_layers = 0
 script = ExtResource("1_2gn6n")
 
 [node name="Icon" type="Sprite2D" parent="Node2D/character/character" unique_id=60606033]
-position = Vector2(-2, 1)
-texture = ExtResource("2_l0a5c")
+visible = false
+position = Vector2(10, -24)
+scale = Vector2(6, 6)
+texture = ExtResource("2_dak1h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/character/character" unique_id=782613579]
 shape = SubResource("CircleShape2D_rpb1b")
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/character/character" unique_id=953257913]
+[node name="Icon2" type="Node2D" parent="Node2D/character/character" unique_id=1552264854]
+scale = Vector2(6, 6)
 
-[node name="Sprite2D2" type="Sprite2D" parent="Node2D/character/character" unique_id=357097519]
+[node name="Icon" type="Sprite2D" parent="Node2D/character/character/Icon2" unique_id=103223063]
+position = Vector2(1.666666, -4.166666)
+texture = ExtResource("2_dak1h")
+
+[node name="arrow" type="Node2D" parent="Node2D/character/character/Icon2" unique_id=1216625130]
+position = Vector2(0, -1.1666667)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/character/character/Icon2/arrow" unique_id=1549596494]
+z_index = 2
+position = Vector2(0.83333325, 2.3333328)
+scale = Vector2(0.34375, 0.33333325)
+texture = ExtResource("3_l6age")
 
 [node name="people" type="Node2D" parent="Node2D" unique_id=1781502234]
 

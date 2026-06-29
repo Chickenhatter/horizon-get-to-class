@@ -32,14 +32,15 @@ func _physics_process(delta: float) -> void:
 			direct = ("right")
 		else:
 			direct = "none"
-		if ((velocity - collider.velocity)).dot(smack) < 0:
-			velocity = velocity.slide(smack)
-			move_and_collide(velocity * delta)
-		elif ((velocity - collider.velocity)).dot(smack) > 0:
-			velocity = velocity.slide(smack)
-			move_and_collide(velocity * delta)
-		else:
-			velocity = push * original_speed
+		if "velocity" in collider:
+			if ((velocity - collider.velocity)).dot(smack) < 0:
+				velocity = velocity.slide(smack)
+				move_and_collide(velocity * delta)
+			elif ((velocity - collider.velocity)).dot(smack) > 0:
+				velocity = velocity.slide(smack)
+				move_and_collide(velocity * delta)
+			else:
+				velocity = push * original_speed
 	$Icon2.scale.x = (1.5*(sin((2*PI*($".".rotation_degrees+45)/180)))+4.5)
 	$CollisionPolygon2D.scale.x = (1.5*(sin((2*PI*($".".rotation_degrees+45)/180)))+4.5)/6
 	$Icon2.rotation_degrees = -$".".rotation_degrees

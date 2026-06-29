@@ -10,7 +10,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	Global.timer_str = str($"../Timer".time_left)
+	Global.timer_str = str("%.1f" % $"../Timer".time_left)
 
 func find_new():
 	var random = randi_range(1,9)

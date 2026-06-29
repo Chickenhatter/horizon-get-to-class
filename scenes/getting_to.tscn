@@ -4,11 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://dhetnbigbagbg" path="res://assets/human/pixil-frame-0 (13).png" id="2_dak1h"]
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_l0a5c"]
 [ext_resource type="Script" uid="uid://ddhb5d6cw035w" path="res://code/moving1.gd" id="3_4m780"]
-[ext_resource type="Texture2D" uid="uid://celsot7yfnag4" path="res://assets/human/pixil-frame-0 (15).png" id="3_l6age"]
+[ext_resource type="Texture2D" uid="uid://celsot7yfnag4" path="res://assets/other/pixil-frame-0 (15).png" id="3_l6age"]
 [ext_resource type="Script" uid="uid://c1r628slsblxt" path="res://code/classes_decider.gd" id="4_ku5y5"]
 [ext_resource type="Script" uid="uid://dc4oih1orewkw" path="res://code/camera.gd" id="5_6viju"]
 [ext_resource type="Texture2D" uid="uid://dij357whn0vpq" path="res://assets/human/pixil-frame-0 (16).png" id="5_sn084"]
 [ext_resource type="Texture2D" uid="uid://cbge3i68g8yk3" path="res://assets/human/pixil-frame-0 (14).png" id="6_ah7as"]
+[ext_resource type="Texture2D" uid="uid://ctb5h68yr2q48" path="res://assets/other/pixil-frame-0 (18).png" id="9_sn084"]
 
 [sub_resource type="Curve2D" id="Curve2D_4m780"]
 _data = {
@@ -18,25 +19,6 @@ point_count = 5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ku5y5"]
 size = Vector2(148.98418, 222.97482)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_rpb1b"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": null
-}],
-"loop": 1,
-"name": &"no",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_sn084")
-}],
-"loop": 1,
-"name": &"them",
-"speed": 5.0
-}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7xrwy"]
 animations = [{
@@ -51,6 +33,25 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("6_ah7as")
+}],
+"loop": 1,
+"name": &"them",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rpb1b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": 1,
+"name": &"no",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_sn084")
 }],
 "loop": 1,
 "name": &"them",
@@ -89,12 +90,6 @@ position = Vector2(385, 507)
 platform_floor_layers = 0
 script = ExtResource("1_2gn6n")
 
-[node name="Icon" type="Sprite2D" parent="Node2D/character/character" unique_id=60606033]
-visible = false
-position = Vector2(10, -24)
-scale = Vector2(6, 6)
-texture = ExtResource("2_dak1h")
-
 [node name="Icon2" type="Node2D" parent="Node2D/character/character" unique_id=1552264854]
 scale = Vector2(6, 6)
 
@@ -114,6 +109,12 @@ texture = ExtResource("3_l6age")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/character/character" unique_id=368582955]
 polygon = PackedVector2Array(-14, -68, 17, -68, 17, -37, 41, -37, 41, -8, 47, -8, 47, 7, 33, 7, 28, 7, 28, 72, -27, 72, -27, 5, -44, 5, -46, 5, -46, -8, -40, -8, -40, -37, -15, -37, -15, -68)
 
+[node name="Icon" type="Sprite2D" parent="Node2D/character/character/CollisionPolygon2D" unique_id=361258464]
+visible = false
+position = Vector2(10.000009, -25.000008)
+scale = Vector2(6, 6)
+texture = ExtResource("2_dak1h")
+
 [node name="people" type="Node2D" parent="Node2D" unique_id=1781502234]
 
 [node name="students" type="Path2D" parent="Node2D/people" unique_id=1999616336]
@@ -126,26 +127,37 @@ progress = 3242.4343
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/people/students/PathFollow2D" unique_id=1366225198]
 position = Vector2(4.0494885, -122.955696)
+rotation = 3.1415927
 platform_floor_layers = 0
 script = ExtResource("3_4m780")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/people/students/PathFollow2D/CharacterBody2D" unique_id=1704654837]
-position = Vector2(-3.8788452, 118.48142)
+position = Vector2(4.374034, -123.98737)
+rotation = 1.5707964
 scale = Vector2(1, 0.3)
 shape = SubResource("RectangleShape2D_ku5y5")
 
-[node name="side" type="AnimatedSprite2D" parent="Node2D/people/students/PathFollow2D/CharacterBody2D" unique_id=1251426449]
-position = Vector2(22.637909, 120.06885)
-rotation = 1.5707964
-scale = Vector2(6, 6)
-sprite_frames = SubResource("SpriteFrames_rpb1b")
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/people/students/PathFollow2D/CharacterBody2D/CollisionShape2D" unique_id=2078053967]
+position = Vector2(-0.24010468, -2.4258633)
+scale = Vector2(1.1710578, 1.7303559)
+texture = ExtResource("2_l0a5c")
+
+[node name="forward" type="Node2D" parent="Node2D/people/students/PathFollow2D/CharacterBody2D" unique_id=2119719997]
+position = Vector2(4.3710155, -122.98736)
+
+[node name="forward" type="AnimatedSprite2D" parent="Node2D/people/students/PathFollow2D/CharacterBody2D/forward" unique_id=883736721]
+position = Vector2(8.0874405, -28.97575)
+scale = Vector2(7.000001, 6.381)
+sprite_frames = SubResource("SpriteFrames_7xrwy")
 animation = &"them"
 
-[node name="forward" type="AnimatedSprite2D" parent="Node2D/people/students/PathFollow2D/CharacterBody2D" unique_id=883736721]
-position = Vector2(23.319384, 119.10352)
-rotation = 1.5707964
-scale = Vector2(7, 6.381)
-sprite_frames = SubResource("SpriteFrames_7xrwy")
+[node name="side" type="Node2D" parent="Node2D/people/students/PathFollow2D/CharacterBody2D" unique_id=1812234559]
+position = Vector2(3.3710213, -122.990395)
+
+[node name="side" type="AnimatedSprite2D" parent="Node2D/people/students/PathFollow2D/CharacterBody2D/side" unique_id=1251426449]
+position = Vector2(10.084404, -27.9697)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_rpb1b")
 animation = &"them"
 
 [node name="classes" type="Node2D" parent="Node2D" unique_id=2028233519]
@@ -216,14 +228,27 @@ script = ExtResource("5_6viju")
 position = Vector2(385, 507)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Node2D/camera/Camera2D" unique_id=1324671600]
-offset_left = -576.0
-offset_top = -325.0
-offset_right = -69.0
-offset_bottom = -56.0
+offset_left = -561.0
+offset_top = -324.0
+offset_right = -54.0
+offset_bottom = -55.0
+theme_override_font_sizes/normal_font_size = 41
+text = "test"
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/camera/Camera2D" unique_id=1951960244]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_l0a5c")
+[node name="Sprite2D" type="Node2D" parent="Node2D/camera/Camera2D" unique_id=383296780]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/camera/Camera2D/Sprite2D" unique_id=1951960244]
+position = Vector2(8, 13)
+scale = Vector2(11.935, 11.935)
+texture = ExtResource("9_sn084")
+
+[node name="class" type="RichTextLabel" parent="Node2D/camera/Camera2D" unique_id=1107035025]
+offset_left = 255.0
+offset_top = -312.0
+offset_right = 622.0
+offset_bottom = -143.0
+theme_override_font_sizes/normal_font_size = 41
+text = "pe"
 
 [connection signal="body_entered" from="Node2D/classes/classes/eng" to="Node2D/classes/classes" method="_on_eng_body_entered"]
 [connection signal="body_exited" from="Node2D/classes/classes/eng" to="Node2D/classes/classes" method="_on_eng_body_exited"]

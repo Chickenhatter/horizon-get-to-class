@@ -12,9 +12,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed('ui_s'):
 		movement = Vector2.DOWN.rotated(deg_to_rad(rotation_degrees))
 	if Input.is_action_pressed('ui_a'):
-		$".".rotation_degrees -= 1
+		$".".rotation_degrees -= 3
 	if Input.is_action_pressed('ui_d'):
-		$".".rotation_degrees += 1
+		$".".rotation_degrees += 3
 	velocity = movement * SPEED
 	var collision = move_and_collide(velocity * delta)
 	if collision:
@@ -41,6 +41,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity = push * original_speed
 	$Icon2.scale.x = (1.5*(sin((2*PI*($".".rotation_degrees+45)/180)))+4.5)
-	$CollisionPolygon2D.scale.x = (1.5*(sin((2*PI*($".".rotation_degrees+45)/180)))+4.5)
+	$CollisionPolygon2D.scale.x = (1.5*(sin((2*PI*($".".rotation_degrees+45)/180)))+4.5)/6
 	$Icon2.rotation_degrees = -$".".rotation_degrees
 	$Icon2/arrow.rotation_degrees = $".".rotation_degrees
+	$CollisionPolygon2D.rotation_degrees = -$".".rotation_degrees

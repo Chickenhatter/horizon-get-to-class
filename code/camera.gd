@@ -11,6 +11,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	$Camera2D.global_position = Global.character_position
 	$Camera2D/RichTextLabel.text = Global.timer_str
+	$Camera2D/class.text = "Get to: " + Global.clas
 	if follow == true:
 		$Camera2D/Sprite2D.look_at(Global.positio)
-		$Camera2D/Sprite2D.rotation_degrees += 90
+		$Camera2D/Sprite2D.rotation_degrees -= 90

@@ -42,6 +42,7 @@ func find_new():
 		clas = "sst"
 		positio = $sst.global_position
 	Global.positio = positio
+	Global.clas = clas.to_upper()
 	print(clas)
 	find_timer()
 func find_timer():

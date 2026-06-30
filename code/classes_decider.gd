@@ -4,17 +4,22 @@ var posi2 = 'none'
 var positio = 'none'
 var run = 10
 var close_check = false
+var flag = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	await get_tree().create_timer(1).timeout
 	find_new()
+	await get_tree().create_timer(0.11).timeout
+	flag = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	posi2 = $"../../map/contol".global_position
-	Global.timer_str = str("%.1f" % $"../Timer".time_left)
-
+	Global.timer_str = str("%.1f" % ($"../Timer".time_left-1))
+	if flag == true:
+		if $"../Timer".time_left < 1:
+			Global.quick_black = true
 func find_new():
 	var random = randi_range(1,9)
 	if random == 1:
@@ -52,37 +57,27 @@ func find_new():
 	posi2 = positio
 	print(clas)
 	find_timer()
+
+
 func find_timer():
 	if close_check == false:
-		$"../Timer".wait_time = 14+ (positio.distance_to(Global.character_position))/(run*10)
+		$"../Timer".wait_time = 15+ (positio.distance_to(Global.character_position))/(run*10)
 	else:
-		$"../Timer".wait_time = 21 + (positio.distance_to(Global.character_position))/(run*10)
+		$"../Timer".wait_time = 22 + (positio.distance_to(Global.character_position))/(run*10)
 	$"../Timer".start()
-	run += 1
+	run += 3
 	print(run)
+
+
 func _on_eng_body_entered(body: Node2D) -> void:
 	if body.name == "character":
 		if clas == "eng":
 			find_new()
 
-
-func _on_eng_body_exited(body: Node2D) -> void:
-	pass # Replace with function body.
-
-
 func _on_pe_body_entered(body: Node2D) -> void:
 	if body.name == "character":
 		if clas == "pe":
 			find_new()
-
-
-func _on_pe_body_exited(body: Node2D) -> void:
-	pass # Replace with function body.
-
-
-func _on_re_body_exited(body: Node2D) -> void:
-	pass
-
 
 func _on_re_body_entered(body: Node2D) -> void:
 	if body.name == "character":
@@ -96,17 +91,10 @@ func _on_mat_body_entered(body: Node2D) -> void:
 			find_new()
 
 
-func _on_mat_body_exited(body: Node2D) -> void:
-	pass # Replace with function body.
-
-
 func _on_csc_body_entered(body: Node2D) -> void:
 	if body.name == "character":
 		if clas == "csc":
 			find_new()
-
-func _on_csc_body_exited(body: Node2D) -> void:
-	pass # Replace with function body.
 
 
 func _on_phy_body_entered(body: Node2D) -> void:
@@ -115,18 +103,10 @@ func _on_phy_body_entered(body: Node2D) -> void:
 			find_new()
 
 
-func _on_phy_body_exited(body: Node2D) -> void:
-	pass # Replace with function body.
-
-
 func _on_che_body_entered(body: Node2D) -> void:
 	if body.name == "character":
 		if clas == "che":
 			find_new()
-
-
-func _on_che_body_exited(body: Node2D) -> void:
-	pass # Replace with function body.
 
 
 func _on_bio_body_entered(body: Node2D) -> void:
@@ -135,14 +115,7 @@ func _on_bio_body_entered(body: Node2D) -> void:
 			find_new()
 
 
-func _on_bio_body_exited(body: Node2D) -> void:
-	pass # Replace with function body.
-
-
 func _on_sst_body_entered(body: Node2D) -> void:
 	if body.name == "character":
 		if clas == "sst":
 			find_new()
-
-func _on_sst_body_exited(body: Node2D) -> void:
-	pass # Replace with function body.

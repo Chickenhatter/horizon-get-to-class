@@ -20,6 +20,11 @@ func _process(delta: float) -> void:
 	if flag == true:
 		if $"../Timer".time_left < 1:
 			Global.quick_black = true
+
+func darkness():
+	Global.quick_up_down = true
+
+
 func find_new():
 	var random = randi_range(1,9)
 	if random == 1:
@@ -73,49 +78,58 @@ func _on_eng_body_entered(body: Node2D) -> void:
 	if body.name == "character":
 		if clas == "eng":
 			find_new()
+			darkness()
 
 func _on_pe_body_entered(body: Node2D) -> void:
 	if body.name == "character":
 		if clas == "pe":
 			find_new()
+			darkness()
 
 func _on_re_body_entered(body: Node2D) -> void:
 	if body.name == "character":
 		if clas == "re":
 			find_new()
+			darkness()
 
 
 func _on_mat_body_entered(body: Node2D) -> void:
 	if body.name == "character":
 		if clas == "mat":
 			find_new()
+			darkness()
 
 
 func _on_csc_body_entered(body: Node2D) -> void:
 	if body.name == "character":
 		if clas == "csc":
 			find_new()
+			darkness()
 
 
 func _on_phy_body_entered(body: Node2D) -> void:
 	if body.name == "character":
 		if clas == "phy":
 			find_new()
+			darkness()
 
 
 func _on_che_body_entered(body: Node2D) -> void:
 	if body.name == "character":
 		if clas == "che":
 			find_new()
+			darkness()
 
 
 func _on_bio_body_entered(body: Node2D) -> void:
 	if body.name == "character":
 		if clas == "bio":
 			find_new()
+			darkness()
 
 
 func _on_sst_body_entered(body: Node2D) -> void:
 	if body.name == "character":
 		if clas == "sst":
 			find_new()
+			darkness()

@@ -1,6 +1,7 @@
 extends Node2D
 var follow = false
 var unblack = true
+var black = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Camera2D/black.self_modulate.a = 1
@@ -25,6 +26,16 @@ func _process(delta: float) -> void:
 		await get_tree().create_timer(2).timeout
 		get_tree().change_scene_to_file("res://scenes/end.tscn")
 	
+	if Global.quick_up_down == true:
+		black = true
+		unblack = true
+		Global.quick_up_down = false
+	
+	if black == true:
+		print('a')
+		$Camera2D/black.self_modulate.a += delta/1.5
+	
+	
 	if $Camera2D/black.self_modulate.a < 0:
 		$Camera2D/black.self_modulate.a = 0
 		Global.quick_black = false
@@ -34,4 +45,4 @@ func _process(delta: float) -> void:
 		$Camera2D/black.self_modulate.a = 1
 		Global.quick_black = false
 		Global.quick_up_down = false
-		unblack = false
+		black = false

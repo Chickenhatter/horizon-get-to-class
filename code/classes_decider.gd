@@ -1,7 +1,9 @@
 extends Node2D
 var clas = 'none'
+var posi2 = 'none'
 var positio = 'none'
 var run = 10
+var close_check = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	await get_tree().create_timer(1).timeout
@@ -10,6 +12,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	posi2 = $"../../map/contol".global_position
 	Global.timer_str = str("%.1f" % $"../Timer".time_left)
 
 func find_new():
@@ -43,12 +46,19 @@ func find_new():
 		positio = $sst.global_position
 	Global.positio = positio
 	Global.clas = clas.to_upper()
+	close_check = false
+	if ((posi2).distance_to(positio)) < 1536:
+		close_check = true
+	posi2 = positio
 	print(clas)
 	find_timer()
 func find_timer():
-	$"../Timer".wait_time = (positio.distance_to(Global.character_position))/run
+	if close_check == false:
+		$"../Timer".wait_time = 14+ (positio.distance_to(Global.character_position))/(run*10)
+	else:
+		$"../Timer".wait_time = 21 + (positio.distance_to(Global.character_position))/(run*10)
 	$"../Timer".start()
-	run += 3
+	run += 1
 	print(run)
 func _on_eng_body_entered(body: Node2D) -> void:
 	if body.name == "character":

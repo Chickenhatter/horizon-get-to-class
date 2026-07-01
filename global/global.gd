@@ -1,5 +1,5 @@
 extends Node
-var character_position = 0
+var character_position = Vector2(0,0)
 var timer_str = 1
 var positio = 0
 var clas = ""

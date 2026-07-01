@@ -15,7 +15,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	$Camera2D.global_position = Global.character_position
 	
-	
+	if Global.quick_black == true:
+		$Camera2D/black.self_modulate.a += delta/2
 	if down == false:
 		$Camera2D/RichTextLabel.text = str(randi_range(1,1000))
 		$Camera2D/class.text = str(randi_range(1,1000))
@@ -33,8 +34,7 @@ func _process(delta: float) -> void:
 		$Camera2D/black.self_modulate.a -= delta/2
 	
 	if Global.quick_black == true:
-		$Camera2D/black.self_modulate.a -= delta/3
-		await get_tree().create_timer(2).timeout
+		await get_tree().create_timer(4).timeout
 		get_tree().change_scene_to_file("res://scenes/end.tscn")
 	
 	if Global.quick_up_down == true:
@@ -51,13 +51,13 @@ func _process(delta: float) -> void:
 	
 	if $Camera2D/black.self_modulate.a < 0:
 		$Camera2D/black.self_modulate.a = 0
-		Global.quick_black = false
 		Global.quick_up_down = false
 		unblack = false
 		down = true
-		$Camera2D/Sprite2D/Sprite2D.self_modulate.a = 1
+		$Camera2D/Sprite2D/Sprite2D.self_modulate.a = 0.5
 	if $Camera2D/black.self_modulate.a > 1:
+		$Camera2D/AudioStreamPlayer2D.play()
+		await get_tree().create_timer(1).timeout
 		$Camera2D/black.self_modulate.a = 1
-		Global.quick_black = false
 		Global.quick_up_down = false
 		black = false

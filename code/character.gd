@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var moving
+var moving = true
 var collision = get_slide_collision(0)
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0

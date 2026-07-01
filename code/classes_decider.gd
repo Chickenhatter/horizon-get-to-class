@@ -23,6 +23,7 @@ func _process(delta: float) -> void:
 
 func darkness():
 	Global.quick_up_down = true
+	Global.call_char_mov = true
 
 
 func find_new():

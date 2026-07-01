@@ -66,9 +66,9 @@ func find_new():
 
 func find_timer():
 	if close_check == false:
-		$"../Timer".wait_time = 15+ (positio.distance_to(Global.character_position))/(run*10)
+		$"../Timer".wait_time = 18+ (positio.distance_to(Global.character_position))/(run*10)
 	else:
-		$"../Timer".wait_time = 22 + (positio.distance_to(Global.character_position))/(run*10)
+		$"../Timer".wait_time = 25 + (positio.distance_to(Global.character_position))/(run*10)
 	$"../Timer".start()
 	run += 3
 	print(run)

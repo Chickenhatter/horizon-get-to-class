@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://ii24m7exwefq" path="res://code/character.gd" id="1_2gn6n"]
 [ext_resource type="Texture2D" uid="uid://dhetnbigbagbg" path="res://assets/human/pixil-frame-0 (13).png" id="2_dak1h"]
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_l0a5c"]
 [ext_resource type="Script" uid="uid://ddhb5d6cw035w" path="res://code/moving1.gd" id="3_4m780"]
 [ext_resource type="Texture2D" uid="uid://celsot7yfnag4" path="res://assets/other/pixil-frame-0 (15).png" id="3_l6age"]
 [ext_resource type="Script" uid="uid://c1r628slsblxt" path="res://code/classes_decider.gd" id="4_ku5y5"]
@@ -21,11 +20,11 @@
 [ext_resource type="Texture2D" uid="uid://cpfx8t7siseif" path="res://assets/color/Red.webp" id="18_q5pxj"]
 [ext_resource type="Texture2D" uid="uid://i0ne5pq01xad" path="res://assets/color/Yellow.webp" id="19_os1gk"]
 
-[sub_resource type="Curve2D" id="Curve2D_4m780"]
+[sub_resource type="Curve2D" id="Curve2D_7xrwy"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 2, -1, 0, 0, 0, 0, 1135, 3, 0, 0, 0, 0, 1126, 650, 0, 0, 0, 0, 6, 660, 0, 0, 0, 0, 4, -3)
+"points": PackedVector2Array(0, 0, 0, 0, -3195, 455, 0, 0, 0, 0, -3178, -985, 0, 0, 0, 0, -1453, -968, 0, 0, 0, 0, -1449, 474, 0, 0, 0, 0, -3187, 455, 0, 0, 0, 0, -3195, 455, 0, 0, 0, 0, -3271, 1971, 0, 0, 0, 0, -2154, 2037, 0, 0, 0, 0, -2135, 3381, 0, 0, 0, 0, -3309, 3315, 0, 0, 0, 0, -3195, 455, 0, 0, 0, 0, 4, 3357, 0, 0, 0, 0, -1731, 3306, 0, 0, 0, 0, -1874, 2099, 0, 0, 0, 0, -2519, 1423, 0, 0, 0, 0, -1223, 340, 0, 0, 0, 0, -1245, -1704, 0, 0, 0, 0, 2772, -1676, 0, 0, 0, 0, 2830, 879, 0, 0, 0, 0, 226, 1011, 0, 0, 0, 0, -30, 2338, 0, 0, 0, 0, -3195, 455)
 }
-point_count = 5
+point_count = 22
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ku5y5"]
 size = Vector2(148.98418, 222.97482)
@@ -67,6 +66,54 @@ animations = [{
 "name": &"them",
 "speed": 5.0
 }]
+
+[sub_resource type="Curve2D" id="Curve2D_ainvf"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -879, 375, 0, 0, 0, 0, 2594, 417, 0, 0, 0, 0, 2625, -1447, 0, 0, 0, 0, 2625, -1495, 0, 0, 0, 0, -883, -1529, 0, 0, 0, 0, -879, 375)
+}
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_5m13b"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2499, 1241, 0, 0, 0, 0, 287, 1231, 0, 0, 0, 0, 348, 3210, 0, 0, 0, 0, 2549, 3249, 0, 0, 0, 0, 2511, 2728, 0, 0, 0, 0, 2816, 2728, 0, 0, 0, 0, 2804, 1511, 0, 0, 0, 0, 2479, 1508, 0, 0, 0, 0, 2499, 1241)
+}
+point_count = 9
+
+[sub_resource type="Curve2D" id="Curve2D_nrcul"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1230, 2017, 0, 0, 0, 0, -195, 2067, 0, 0, 0, 0, -151, 862, 0, 0, 0, 0, -1518, 848, 0, 0, 0, 0, -151, 860, 0, 0, 0, 0, -199, 2061, 0, 0, 0, 0, -1235, 2012, 0, 0, 0, 0, -1230, 2017)
+}
+point_count = 8
+
+[sub_resource type="Curve2D" id="Curve2D_q5pxj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -2120, 924, 0, 0, 0, 0, -1847, 3151, 0, 0, 0, 0, 107, 3226, 0, 0, 0, 0, 128, 1115, 0, 0, 0, 0, 2743, 972, 0, 0, 0, 0, 2927, -1678, 0, 0, 0, 0, -1173, -1719, 0, 0, 0, 0, -1194, 617, 0, 0, 0, 0, -2105, 704, 0, 0, 0, 0, -2120, 924)
+}
+point_count = 10
+
+[sub_resource type="Curve2D" id="Curve2D_8vj4t"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -3239, -1129, 0, 0, 0, 0, -1361, -1095, 0, 0, 0, 0, -1393, -1572, 0, 0, 0, 0, -3241, -1611, 0, 0, 0, 0, -3239, -1129)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_5k14d"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -2197, 680, 0, 0, 0, 0, -2225, 2696, 0, 0, 0, 0, 232, 2850, 0, 0, 0, 0, 103, 735, 0, 0, 0, 0, -2197, 680)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_os1gk"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -15, -1386, 0, 0, 0, 0, 1739, -1395, 0, 0, 0, 0, 1751, -810, 0, 0, 0, 0, -15, -821, 0, 0, 0, 0, -15, -1386)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_um1it"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -3294, 2016, 0, 0, 0, 0, -3272, 3252, 0, 0, 0, 0, -2303, 3309, 0, 0, 0, 0, -2370, 2057, 0, 0, 0, 0, -3294, 2016)
+}
+point_count = 5
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8vj4t"]
 radius = 66.189125
@@ -10718,9 +10765,6 @@ sources/0 = SubResource("TileSetAtlasSource_37x72")
 [node name="character" type="Node2D" parent="Node2D" unique_id=1100738879]
 position = Vector2(-4000, 34)
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/character" unique_id=1884422781]
-visible = false
-
 [node name="character" type="CharacterBody2D" parent="Node2D/character" unique_id=1174257859]
 position = Vector2(749, -1727)
 platform_floor_layers = 0
@@ -10753,44 +10797,423 @@ texture = ExtResource("2_dak1h")
 
 [node name="people" type="Node2D" parent="Node2D" unique_id=1781502234]
 
-[node name="students" type="Path2D" parent="Node2D/people" unique_id=1999616336]
-curve = SubResource("Curve2D_4m780")
+[node name="basic circle" type="Node2D" parent="Node2D/people" unique_id=379403195]
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/people/students" unique_id=1386723021]
-position = Vector2(4.9673557, 317.67856)
-rotation = -1.573813
-progress = 3242.4343
+[node name="students" type="Path2D" parent="Node2D/people/basic circle" unique_id=1999616336]
+curve = SubResource("Curve2D_7xrwy")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/people/students/PathFollow2D" unique_id=1366225198]
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/people/basic circle/students" unique_id=1386723021]
+position = Vector2(-3195, 455)
+rotation = 3.1415927
+progress = 6353.294
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/people/basic circle/students/PathFollow2D" unique_id=1366225198]
 position = Vector2(4.0494885, -122.955696)
 rotation = 3.1415927
 platform_floor_layers = 0
 script = ExtResource("3_4m780")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/people/students/PathFollow2D/CharacterBody2D" unique_id=1704654837]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/people/basic circle/students/PathFollow2D/CharacterBody2D" unique_id=1704654837]
 position = Vector2(4.374034, -123.98737)
 rotation = 1.5707964
 scale = Vector2(1, 0.3)
 shape = SubResource("RectangleShape2D_ku5y5")
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/people/students/PathFollow2D/CharacterBody2D/CollisionShape2D" unique_id=2078053967]
-position = Vector2(-0.24010468, -2.4258633)
-scale = Vector2(1.1710578, 1.7303559)
-texture = ExtResource("2_l0a5c")
-
-[node name="forward" type="Node2D" parent="Node2D/people/students/PathFollow2D/CharacterBody2D" unique_id=2119719997]
+[node name="forward" type="Node2D" parent="Node2D/people/basic circle/students/PathFollow2D/CharacterBody2D" unique_id=2119719997]
 position = Vector2(4.3710155, -122.98736)
 
-[node name="forward" type="AnimatedSprite2D" parent="Node2D/people/students/PathFollow2D/CharacterBody2D/forward" unique_id=883736721]
+[node name="forward" type="AnimatedSprite2D" parent="Node2D/people/basic circle/students/PathFollow2D/CharacterBody2D/forward" unique_id=883736721]
 position = Vector2(8.0874405, -28.97575)
 scale = Vector2(7.000001, 6.381)
 sprite_frames = SubResource("SpriteFrames_7xrwy")
 animation = &"them"
 
-[node name="side" type="Node2D" parent="Node2D/people/students/PathFollow2D/CharacterBody2D" unique_id=1812234559]
+[node name="side" type="Node2D" parent="Node2D/people/basic circle/students/PathFollow2D/CharacterBody2D" unique_id=1812234559]
 position = Vector2(3.3710213, -122.990395)
 
-[node name="side" type="AnimatedSprite2D" parent="Node2D/people/students/PathFollow2D/CharacterBody2D/side" unique_id=1251426449]
+[node name="side" type="AnimatedSprite2D" parent="Node2D/people/basic circle/students/PathFollow2D/CharacterBody2D/side" unique_id=1251426449]
+position = Vector2(10.084404, -27.9697)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_rpb1b")
+animation = &"them"
+
+[node name="students2" type="Path2D" parent="Node2D/people/basic circle" unique_id=922690818]
+curve = SubResource("Curve2D_ainvf")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/people/basic circle/students2" unique_id=726247093]
+position = Vector2(2363.2021, 414.2088)
+rotation = 0.012092702
+progress = 3242.4343
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/people/basic circle/students2/PathFollow2D" unique_id=735690047]
+position = Vector2(4.0494885, -122.955696)
+rotation = 3.1415927
+platform_floor_layers = 0
+script = ExtResource("3_4m780")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/people/basic circle/students2/PathFollow2D/CharacterBody2D" unique_id=1490377993]
+position = Vector2(4.374034, -123.98737)
+rotation = 1.5707964
+scale = Vector2(1, 0.3)
+shape = SubResource("RectangleShape2D_ku5y5")
+
+[node name="forward" type="Node2D" parent="Node2D/people/basic circle/students2/PathFollow2D/CharacterBody2D" unique_id=1110738325]
+position = Vector2(4.3710155, -122.98736)
+
+[node name="forward" type="AnimatedSprite2D" parent="Node2D/people/basic circle/students2/PathFollow2D/CharacterBody2D/forward" unique_id=397697117]
+position = Vector2(8.0874405, -28.97575)
+scale = Vector2(7.000001, 6.381)
+sprite_frames = SubResource("SpriteFrames_7xrwy")
+animation = &"them"
+
+[node name="side" type="Node2D" parent="Node2D/people/basic circle/students2/PathFollow2D/CharacterBody2D" unique_id=745252259]
+position = Vector2(3.3710213, -122.990395)
+
+[node name="side" type="AnimatedSprite2D" parent="Node2D/people/basic circle/students2/PathFollow2D/CharacterBody2D/side" unique_id=14500583]
+position = Vector2(10.084404, -27.9697)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_rpb1b")
+animation = &"them"
+
+[node name="students3" type="Path2D" parent="Node2D/people/basic circle" unique_id=952429769]
+curve = SubResource("Curve2D_ainvf")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/people/basic circle/students3" unique_id=1838571274]
+position = Vector2(-627.4929, -1526.5234)
+rotation = -3.1319008
+progress = 8638.129
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/people/basic circle/students3/PathFollow2D" unique_id=1438748668]
+position = Vector2(4.0494885, -122.955696)
+rotation = 3.1415927
+platform_floor_layers = 0
+script = ExtResource("3_4m780")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/people/basic circle/students3/PathFollow2D/CharacterBody2D" unique_id=435702895]
+position = Vector2(4.374034, -123.98737)
+rotation = 1.5707964
+scale = Vector2(1, 0.3)
+shape = SubResource("RectangleShape2D_ku5y5")
+
+[node name="forward" type="Node2D" parent="Node2D/people/basic circle/students3/PathFollow2D/CharacterBody2D" unique_id=751359012]
+position = Vector2(4.3710155, -122.98736)
+
+[node name="forward" type="AnimatedSprite2D" parent="Node2D/people/basic circle/students3/PathFollow2D/CharacterBody2D/forward" unique_id=1484197660]
+position = Vector2(8.0874405, -28.97575)
+scale = Vector2(7.000001, 6.381)
+sprite_frames = SubResource("SpriteFrames_7xrwy")
+animation = &"them"
+
+[node name="side" type="Node2D" parent="Node2D/people/basic circle/students3/PathFollow2D/CharacterBody2D" unique_id=1770818290]
+position = Vector2(3.3710213, -122.990395)
+
+[node name="side" type="AnimatedSprite2D" parent="Node2D/people/basic circle/students3/PathFollow2D/CharacterBody2D/side" unique_id=1515839297]
+position = Vector2(10.084404, -27.9697)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_rpb1b")
+animation = &"them"
+
+[node name="students4" type="Path2D" parent="Node2D/people/basic circle" unique_id=1343785525]
+curve = SubResource("Curve2D_5m13b")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/people/basic circle/students4" unique_id=1172799332]
+position = Vector2(2603.6318, 1509.1503)
+rotation = -3.1323621
+progress = 8638.129
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/people/basic circle/students4/PathFollow2D" unique_id=1158347845]
+position = Vector2(4.0494885, -122.955696)
+rotation = 3.1415927
+platform_floor_layers = 0
+script = ExtResource("3_4m780")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/people/basic circle/students4/PathFollow2D/CharacterBody2D" unique_id=79909556]
+position = Vector2(4.374034, -123.98737)
+rotation = 1.5707964
+scale = Vector2(1, 0.3)
+shape = SubResource("RectangleShape2D_ku5y5")
+
+[node name="forward" type="Node2D" parent="Node2D/people/basic circle/students4/PathFollow2D/CharacterBody2D" unique_id=1549626967]
+position = Vector2(4.3710155, -122.98736)
+
+[node name="forward" type="AnimatedSprite2D" parent="Node2D/people/basic circle/students4/PathFollow2D/CharacterBody2D/forward" unique_id=1439494069]
+position = Vector2(8.0874405, -28.97575)
+scale = Vector2(7.000001, 6.381)
+sprite_frames = SubResource("SpriteFrames_7xrwy")
+animation = &"them"
+
+[node name="side" type="Node2D" parent="Node2D/people/basic circle/students4/PathFollow2D/CharacterBody2D" unique_id=865443905]
+position = Vector2(3.3710213, -122.990395)
+
+[node name="side" type="AnimatedSprite2D" parent="Node2D/people/basic circle/students4/PathFollow2D/CharacterBody2D/side" unique_id=815822493]
+position = Vector2(10.084404, -27.9697)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_rpb1b")
+animation = &"them"
+
+[node name="students5" type="Path2D" parent="Node2D/people/basic circle" unique_id=1618573218]
+curve = SubResource("Curve2D_nrcul")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/people/basic circle/students5" unique_id=2103923364]
+position = Vector2(-1230, 2017)
+rotation = 0.7853982
+progress = 8638.129
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/people/basic circle/students5/PathFollow2D" unique_id=1472628496]
+position = Vector2(4.0494885, -122.955696)
+rotation = 3.1415927
+platform_floor_layers = 0
+script = ExtResource("3_4m780")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/people/basic circle/students5/PathFollow2D/CharacterBody2D" unique_id=1307768060]
+position = Vector2(4.374034, -123.98737)
+rotation = 1.5707964
+scale = Vector2(1, 0.3)
+shape = SubResource("RectangleShape2D_ku5y5")
+
+[node name="forward" type="Node2D" parent="Node2D/people/basic circle/students5/PathFollow2D/CharacterBody2D" unique_id=1467441488]
+position = Vector2(4.3710155, -122.98736)
+
+[node name="forward" type="AnimatedSprite2D" parent="Node2D/people/basic circle/students5/PathFollow2D/CharacterBody2D/forward" unique_id=1042900487]
+position = Vector2(8.0874405, -28.97575)
+scale = Vector2(7.000001, 6.381)
+sprite_frames = SubResource("SpriteFrames_7xrwy")
+animation = &"them"
+
+[node name="side" type="Node2D" parent="Node2D/people/basic circle/students5/PathFollow2D/CharacterBody2D" unique_id=149234128]
+position = Vector2(3.3710213, -122.990395)
+
+[node name="side" type="AnimatedSprite2D" parent="Node2D/people/basic circle/students5/PathFollow2D/CharacterBody2D/side" unique_id=516511695]
+position = Vector2(10.084404, -27.9697)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_rpb1b")
+animation = &"them"
+
+[node name="weird wanderers" type="Node2D" parent="Node2D/people" unique_id=1073511161]
+
+[node name="students2" type="Path2D" parent="Node2D/people/weird wanderers" unique_id=1325095557]
+curve = SubResource("Curve2D_q5pxj")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/people/weird wanderers/students2" unique_id=1522296538]
+position = Vector2(1390.7675, 1045.9462)
+rotation = -0.054630104
+progress = 7574.8594
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/people/weird wanderers/students2/PathFollow2D" unique_id=910030628]
+position = Vector2(4.0494885, -122.955696)
+rotation = 3.1415927
+platform_floor_layers = 0
+script = ExtResource("3_4m780")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/people/weird wanderers/students2/PathFollow2D/CharacterBody2D" unique_id=735833145]
+position = Vector2(4.374034, -123.98737)
+rotation = 1.5707964
+scale = Vector2(1, 0.3)
+shape = SubResource("RectangleShape2D_ku5y5")
+
+[node name="forward" type="Node2D" parent="Node2D/people/weird wanderers/students2/PathFollow2D/CharacterBody2D" unique_id=1825644958]
+position = Vector2(4.3710155, -122.98736)
+
+[node name="forward" type="AnimatedSprite2D" parent="Node2D/people/weird wanderers/students2/PathFollow2D/CharacterBody2D/forward" unique_id=1918335011]
+position = Vector2(8.0874405, -28.97575)
+scale = Vector2(7.000001, 6.381)
+sprite_frames = SubResource("SpriteFrames_7xrwy")
+animation = &"them"
+
+[node name="side" type="Node2D" parent="Node2D/people/weird wanderers/students2/PathFollow2D/CharacterBody2D" unique_id=1922919637]
+position = Vector2(3.3710213, -122.990395)
+
+[node name="side" type="AnimatedSprite2D" parent="Node2D/people/weird wanderers/students2/PathFollow2D/CharacterBody2D/side" unique_id=1841275259]
+position = Vector2(10.084404, -27.9697)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_rpb1b")
+animation = &"them"
+
+[node name="students3" type="Path2D" parent="Node2D/people/weird wanderers" unique_id=549313846]
+curve = SubResource("Curve2D_8vj4t")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/people/weird wanderers/students3" unique_id=904235416]
+position = Vector2(-3238.9998, -1128.9999)
+rotation = 1.5666469
+progress = 4686.778
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/people/weird wanderers/students3/PathFollow2D" unique_id=1988353617]
+position = Vector2(4.0494885, -122.955696)
+rotation = 3.1415927
+platform_floor_layers = 0
+script = ExtResource("3_4m780")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/people/weird wanderers/students3/PathFollow2D/CharacterBody2D" unique_id=1982245080]
+position = Vector2(4.374034, -123.98737)
+rotation = 1.5707964
+scale = Vector2(1, 0.3)
+shape = SubResource("RectangleShape2D_ku5y5")
+
+[node name="forward" type="Node2D" parent="Node2D/people/weird wanderers/students3/PathFollow2D/CharacterBody2D" unique_id=1135536467]
+position = Vector2(4.3710155, -122.98736)
+
+[node name="forward" type="AnimatedSprite2D" parent="Node2D/people/weird wanderers/students3/PathFollow2D/CharacterBody2D/forward" unique_id=946857689]
+position = Vector2(8.0874405, -28.97575)
+scale = Vector2(7.000001, 6.381)
+sprite_frames = SubResource("SpriteFrames_7xrwy")
+animation = &"them"
+
+[node name="side" type="Node2D" parent="Node2D/people/weird wanderers/students3/PathFollow2D/CharacterBody2D" unique_id=285072970]
+position = Vector2(3.3710213, -122.990395)
+
+[node name="side" type="AnimatedSprite2D" parent="Node2D/people/weird wanderers/students3/PathFollow2D/CharacterBody2D/side" unique_id=1442319188]
+position = Vector2(10.084404, -27.9697)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_rpb1b")
+animation = &"them"
+
+[node name="students4" type="Path2D" parent="Node2D/people/weird wanderers" unique_id=170698132]
+curve = SubResource("Curve2D_5k14d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/people/weird wanderers/students4" unique_id=2055880713]
+position = Vector2(-2224.0608, 2628.4011)
+rotation = 1.5846844
+progress = 1948.5781
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/people/weird wanderers/students4/PathFollow2D" unique_id=1502842375]
+position = Vector2(4.0494885, -122.955696)
+rotation = 3.1415927
+platform_floor_layers = 0
+script = ExtResource("3_4m780")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/people/weird wanderers/students4/PathFollow2D/CharacterBody2D" unique_id=797001667]
+position = Vector2(4.374034, -123.98737)
+rotation = 1.5707964
+scale = Vector2(1, 0.3)
+shape = SubResource("RectangleShape2D_ku5y5")
+
+[node name="forward" type="Node2D" parent="Node2D/people/weird wanderers/students4/PathFollow2D/CharacterBody2D" unique_id=1779791508]
+position = Vector2(4.3710155, -122.98736)
+
+[node name="forward" type="AnimatedSprite2D" parent="Node2D/people/weird wanderers/students4/PathFollow2D/CharacterBody2D/forward" unique_id=942331404]
+position = Vector2(8.0874405, -28.97575)
+scale = Vector2(7.000001, 6.381)
+sprite_frames = SubResource("SpriteFrames_7xrwy")
+animation = &"them"
+
+[node name="side" type="Node2D" parent="Node2D/people/weird wanderers/students4/PathFollow2D/CharacterBody2D" unique_id=561787858]
+position = Vector2(3.3710213, -122.990395)
+
+[node name="side" type="AnimatedSprite2D" parent="Node2D/people/weird wanderers/students4/PathFollow2D/CharacterBody2D/side" unique_id=1595213816]
+position = Vector2(10.084404, -27.9697)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_rpb1b")
+animation = &"them"
+
+[node name="students5" type="Path2D" parent="Node2D/people/weird wanderers" unique_id=1767688902]
+curve = SubResource("Curve2D_q5pxj")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/people/weird wanderers/students5" unique_id=1482433052]
+position = Vector2(-1186.9875, -163.06064)
+rotation = 1.5797858
+progress = 17241.701
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/people/weird wanderers/students5/PathFollow2D" unique_id=272098649]
+position = Vector2(4.0494885, -122.955696)
+rotation = 3.1415927
+platform_floor_layers = 0
+script = ExtResource("3_4m780")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/people/weird wanderers/students5/PathFollow2D/CharacterBody2D" unique_id=1128751391]
+position = Vector2(4.374034, -123.98737)
+rotation = 1.5707964
+scale = Vector2(1, 0.3)
+shape = SubResource("RectangleShape2D_ku5y5")
+
+[node name="forward" type="Node2D" parent="Node2D/people/weird wanderers/students5/PathFollow2D/CharacterBody2D" unique_id=1480025277]
+position = Vector2(4.3710155, -122.98736)
+
+[node name="forward" type="AnimatedSprite2D" parent="Node2D/people/weird wanderers/students5/PathFollow2D/CharacterBody2D/forward" unique_id=881665551]
+position = Vector2(8.0874405, -28.97575)
+scale = Vector2(7.000001, 6.381)
+sprite_frames = SubResource("SpriteFrames_7xrwy")
+animation = &"them"
+
+[node name="side" type="Node2D" parent="Node2D/people/weird wanderers/students5/PathFollow2D/CharacterBody2D" unique_id=24463972]
+position = Vector2(3.3710213, -122.990395)
+
+[node name="side" type="AnimatedSprite2D" parent="Node2D/people/weird wanderers/students5/PathFollow2D/CharacterBody2D/side" unique_id=51720690]
+position = Vector2(10.084404, -27.9697)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_rpb1b")
+animation = &"them"
+
+[node name="students6" type="Path2D" parent="Node2D/people/weird wanderers" unique_id=1568847403]
+curve = SubResource("Curve2D_os1gk")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/people/weird wanderers/students6" unique_id=1554000611]
+position = Vector2(-15, -1385.9999)
+rotation = -1.5707964
+progress = 8638.129
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/people/weird wanderers/students6/PathFollow2D" unique_id=1085911319]
+position = Vector2(4.0494885, -122.955696)
+rotation = 3.1415927
+platform_floor_layers = 0
+script = ExtResource("3_4m780")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/people/weird wanderers/students6/PathFollow2D/CharacterBody2D" unique_id=2016720956]
+position = Vector2(4.374034, -123.98737)
+rotation = 1.5707964
+scale = Vector2(1, 0.3)
+shape = SubResource("RectangleShape2D_ku5y5")
+
+[node name="forward" type="Node2D" parent="Node2D/people/weird wanderers/students6/PathFollow2D/CharacterBody2D" unique_id=977276711]
+position = Vector2(4.3710155, -122.98736)
+
+[node name="forward" type="AnimatedSprite2D" parent="Node2D/people/weird wanderers/students6/PathFollow2D/CharacterBody2D/forward" unique_id=383201338]
+position = Vector2(8.0874405, -28.97575)
+scale = Vector2(7.000001, 6.381)
+sprite_frames = SubResource("SpriteFrames_7xrwy")
+animation = &"them"
+
+[node name="side" type="Node2D" parent="Node2D/people/weird wanderers/students6/PathFollow2D/CharacterBody2D" unique_id=536616362]
+position = Vector2(3.3710213, -122.990395)
+
+[node name="side" type="AnimatedSprite2D" parent="Node2D/people/weird wanderers/students6/PathFollow2D/CharacterBody2D/side" unique_id=606258212]
+position = Vector2(10.084404, -27.9697)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_rpb1b")
+animation = &"them"
+
+[node name="students7" type="Path2D" parent="Node2D/people/weird wanderers" unique_id=1495317851]
+curve = SubResource("Curve2D_um1it")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/people/weird wanderers/students7" unique_id=1260897749]
+position = Vector2(-3294.0005, 2016.0002)
+rotation = -3.0972495
+progress = 8638.129
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/people/weird wanderers/students7/PathFollow2D" unique_id=1192640658]
+position = Vector2(4.0494885, -122.955696)
+rotation = 3.1415927
+platform_floor_layers = 0
+script = ExtResource("3_4m780")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/people/weird wanderers/students7/PathFollow2D/CharacterBody2D" unique_id=1720189274]
+position = Vector2(4.374034, -123.98737)
+rotation = 1.5707964
+scale = Vector2(1, 0.3)
+shape = SubResource("RectangleShape2D_ku5y5")
+
+[node name="forward" type="Node2D" parent="Node2D/people/weird wanderers/students7/PathFollow2D/CharacterBody2D" unique_id=181529607]
+position = Vector2(4.3710155, -122.98736)
+
+[node name="forward" type="AnimatedSprite2D" parent="Node2D/people/weird wanderers/students7/PathFollow2D/CharacterBody2D/forward" unique_id=1851896480]
+position = Vector2(8.0874405, -28.97575)
+scale = Vector2(7.000001, 6.381)
+sprite_frames = SubResource("SpriteFrames_7xrwy")
+animation = &"them"
+
+[node name="side" type="Node2D" parent="Node2D/people/weird wanderers/students7/PathFollow2D/CharacterBody2D" unique_id=513061556]
+position = Vector2(3.3710213, -122.990395)
+
+[node name="side" type="AnimatedSprite2D" parent="Node2D/people/weird wanderers/students7/PathFollow2D/CharacterBody2D/side" unique_id=1533167903]
 position = Vector2(10.084404, -27.9697)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_rpb1b")
@@ -10865,6 +11288,7 @@ script = ExtResource("5_6viju")
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/camera" unique_id=2056227625]
 position = Vector2(385, 507)
+zoom = Vector2(0.167, 0.167)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Node2D/camera/Camera2D" unique_id=1324671600]
 offset_left = -561.0

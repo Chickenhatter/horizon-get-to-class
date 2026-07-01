@@ -10,7 +10,7 @@ func _ready() -> void:
 	last_position = global_position
 
 func _physics_process(delta: float) -> void:
-	$"..".progress_ratio += delta/30
+	$"..".progress += 211.776333333*delta
 	var current_velocity = (global_position - last_position) / delta
 	last_position = global_position
 	velocity = current_velocity

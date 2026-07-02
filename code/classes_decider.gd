@@ -20,7 +20,6 @@ func _process(delta: float) -> void:
 	if flag == true:
 		if $"../Timer".time_left < 1:
 			Global.quick_black = true
-
 func darkness():
 	Global.quick_up_down = true
 	Global.call_char_mov = true

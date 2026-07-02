@@ -1,3 +1,15 @@
 [gd_scene format=3 uid="uid://chykqfu21lyb3"]
 
+[ext_resource type="Script" uid="uid://qmoropn607in" path="res://code/start.gd" id="1_jaeev"]
+[ext_resource type="Texture2D" uid="uid://b67hd2gldtk43" path="res://assets/color/Grey.webp" id="2_u80x2"]
+
 [node name="Node2D" type="Node2D" unique_id=900116995]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1212927631]
+
+[node name="Node2D" type="Node2D" parent="Node2D" unique_id=2004647274]
+script = ExtResource("1_jaeev")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Node2D" unique_id=385563034]
+self_modulate = Color(0.011764706, 0.011764706, 0.011764706, 0)
+texture = ExtResource("2_u80x2")

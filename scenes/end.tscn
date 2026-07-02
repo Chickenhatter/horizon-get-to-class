@@ -1,3 +1,22 @@
 [gd_scene format=3 uid="uid://pujirl51cm5p"]
 
+[ext_resource type="Script" uid="uid://cmk1tfkee01yk" path="res://code/end.gd" id="1_3d26k"]
+[ext_resource type="AudioStream" uid="uid://by3kjnf7ay6pr" path="res://assets/other/School Bell Sound Effect-GVegAw8UG-U.wav" id="1_mwn6m"]
+[ext_resource type="Texture2D" uid="uid://b67hd2gldtk43" path="res://assets/color/Grey.webp" id="2_p7m4f"]
+
 [node name="Node2D" type="Node2D" unique_id=1941822291]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1736399512]
+script = ExtResource("1_3d26k")
+
+[node name="Node2D" type="Node2D" parent="Node2D" unique_id=1757480170]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Node2D" unique_id=541889358]
+self_modulate = Color(0.011764706, 0.011764706, 0.011764706, 1)
+position = Vector2(614.5, 332)
+scale = Vector2(3.458, 2.328)
+texture = ExtResource("2_p7m4f")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D" unique_id=90850619]
+stream = ExtResource("1_mwn6m")
+autoplay = true

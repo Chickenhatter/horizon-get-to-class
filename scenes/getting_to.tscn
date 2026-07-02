@@ -11288,7 +11288,6 @@ script = ExtResource("5_6viju")
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/camera" unique_id=2056227625]
 position = Vector2(385, 507)
-zoom = Vector2(0.167, 0.167)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Node2D/camera/Camera2D" unique_id=1324671600]
 offset_left = -561.0

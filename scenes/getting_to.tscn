@@ -17,8 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://ckb48txc1j6my" path="res://assets/other/Screenshot From 2026-07-02 21-34-04.png" id="13_xtjcu"]
 [ext_resource type="Texture2D" uid="uid://dn07flq83vjev" path="res://assets/color/Orange.webp" id="14_5k14d"]
 [ext_resource type="Texture2D" uid="uid://bwcyvdj5gb3ep" path="res://assets/other/pixil-frame-0 (21).png" id="14_xtjcu"]
+[ext_resource type="Texture2D" uid="uid://dxfpeyifna0e5" path="res://assets/other/pixil-frame-0 (22).png" id="15_7xn7j"]
 [ext_resource type="Texture2D" uid="uid://dt8ccm2dedlln" path="res://assets/color/Pink.webp" id="15_xtjcu"]
 [ext_resource type="Texture2D" uid="uid://f5tufjsm1cd5" path="res://assets/color/Purple1.webp" id="16_7xn7j"]
+[ext_resource type="Texture2D" uid="uid://bajkhdpal045d" path="res://assets/other/pixil-frame-0 (23).png" id="16_vuahp"]
 [ext_resource type="Texture2D" uid="uid://dxkq3xo0cuwfl" path="res://assets/color/Purple.webp" id="17_vuahp"]
 [ext_resource type="Texture2D" uid="uid://cpfx8t7siseif" path="res://assets/color/Red.webp" id="18_q5pxj"]
 [ext_resource type="Texture2D" uid="uid://i0ne5pq01xad" path="res://assets/color/Yellow.webp" id="19_os1gk"]
@@ -11291,7 +11293,7 @@ wait_time = 100.0
 script = ExtResource("5_6viju")
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/camera" unique_id=2056227625]
-position = Vector2(385, 507)
+position = Vector2(-6562, 5124)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Node2D/camera/Camera2D" unique_id=1324671600]
 offset_left = -561.0
@@ -11318,6 +11320,7 @@ text = "pe"
 
 [node name="black" type="Sprite2D" parent="Node2D/camera/Camera2D" unique_id=1612573213]
 self_modulate = Color(0.011764706, 0.011764706, 0.011764706, 0)
+z_index = 10
 position = Vector2(65.5, -29.5)
 scale = Vector2(4.886, 3.058)
 texture = ExtResource("13_6pg8m")
@@ -11327,7 +11330,7 @@ position = Vector2(-385, -507)
 stream = ExtResource("12_6pg8m")
 
 [node name="Node2D" type="Node2D" parent="Node2D/camera/Camera2D" unique_id=167791592]
-position = Vector2(405, 181)
+position = Vector2(383, 161)
 script = ExtResource("12_5k14d")
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D/camera/Camera2D/Node2D" unique_id=1254469034]
@@ -11345,8 +11348,68 @@ texture = ExtResource("14_xtjcu")
 [node name="Node2D2" type="Node2D" parent="Node2D/camera/Camera2D/Node2D" unique_id=1819115525]
 
 [node name="pe" type="Node2D" parent="Node2D/camera/Camera2D/Node2D/Node2D2" unique_id=486335570]
+position = Vector2(24, 136)
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/camera/Camera2D/Node2D/Node2D2" unique_id=192490489]
+[node name="eng" type="Node2D" parent="Node2D/camera/Camera2D/Node2D/Node2D2" unique_id=1101523391]
+position = Vector2(165, 6)
+
+[node name="mat" type="Node2D" parent="Node2D/camera/Camera2D/Node2D/Node2D2" unique_id=291599315]
+position = Vector2(34, 6)
+
+[node name="re" type="Node2D" parent="Node2D/camera/Camera2D/Node2D/Node2D2" unique_id=178941493]
+position = Vector2(89, 38)
+
+[node name="csc" type="Node2D" parent="Node2D/camera/Camera2D/Node2D/Node2D2" unique_id=994171511]
+position = Vector2(157, 47)
+
+[node name="phy" type="Node2D" parent="Node2D/camera/Camera2D/Node2D/Node2D2" unique_id=586803942]
+position = Vector2(35, 68)
+
+[node name="che" type="Node2D" parent="Node2D/camera/Camera2D/Node2D/Node2D2" unique_id=275089752]
+position = Vector2(138, 143)
+
+[node name="bio" type="Node2D" parent="Node2D/camera/Camera2D/Node2D/Node2D2" unique_id=1105144360]
+position = Vector2(171, 115)
+
+[node name="sst" type="Node2D" parent="Node2D/camera/Camera2D/Node2D/Node2D2" unique_id=862397962]
+position = Vector2(117, 64)
+
+[node name="pointer" type="Node2D" parent="Node2D/camera/Camera2D/Node2D/Node2D2" unique_id=118194521]
+
+[node name="pointer" type="Sprite2D" parent="Node2D/camera/Camera2D/Node2D/Node2D2/pointer" unique_id=192490489]
+self_modulate = Color(0.48677072, 0.70420504, 0.55450225, 1)
+position = Vector2(4, -5)
+texture = ExtResource("14_xtjcu")
+
+[node name="Node2D2" type="Node2D" parent="Node2D/camera/Camera2D" unique_id=186710340]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/camera/Camera2D/Node2D2" unique_id=642254907]
+z_index = -1
+position = Vector2(-4, 132)
+scale = Vector2(19, 19)
+texture = ExtResource("15_7xn7j")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/camera/Camera2D/Node2D2" unique_id=932520492]
+z_index = -1
+position = Vector2(207.99997, -2.9999995)
+rotation = 3.1415927
+scale = Vector2(14, 14)
+texture = ExtResource("16_vuahp")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D/camera/Camera2D/Node2D2" unique_id=1346903280]
+z_index = -1
+position = Vector2(-213, 2.3841858e-07)
+rotation = 3.1415927
+scale = Vector2(14, 14)
+texture = ExtResource("16_vuahp")
+flip_h = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D/camera/Camera2D/Node2D2" unique_id=1603267657]
+self_modulate = Color(0.22605214, 0.22605214, 0.22605214, 1)
+z_index = -1
+position = Vector2(476.00006, 236.99994)
+scale = Vector2(0.4160001, 0.36399937)
+texture = ExtResource("13_6pg8m")
 
 [node name="map" type="Node2D" parent="Node2D" unique_id=29563524]
 

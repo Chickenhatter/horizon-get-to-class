@@ -71,6 +71,7 @@ func find_timer():
 		$"../Timer".wait_time = 25 + (positio.distance_to(Global.character_position))/(run*10)
 	$"../Timer".start()
 	run += 3
+	Global.bell += 1
 	print(run)
 
 

@@ -10,16 +10,16 @@ func _ready() -> void:
 	day = day % 5
 	period = str(Global.bell % 6)
 	if day == 0:
-		day = 'monday'
-	if day == 1:
-		day = 'tuesday'
-	if day == 2:
-		day = 'wednesday'
-	if day == 3:
-		day = 'thursday'
-	if day == 4:
-		day = 'friday'
-	
+		day = 'Monday'
+	elif day == 1:
+		day = 'Tuesday'
+	elif day == 2:
+		day = 'Wednesday'
+	elif day == 3:
+		day = 'Thursday'
+	elif day == 4:
+		day = 'Friday'
+	$Node2D2/RichTextLabel3.text = str(day) + ' period ' + str(period)
 	
 	
 	
@@ -29,7 +29,6 @@ func _ready() -> void:
 	$Node2D/Sprite2D.self_modulate.a = 1
 	await get_tree().create_timer(2).timeout
 	down = true
-	print('test')
 	await get_tree().create_timer(4).timeout
 	up = true
 	await get_tree().create_timer(1).timeout

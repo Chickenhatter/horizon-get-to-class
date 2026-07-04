@@ -60,7 +60,6 @@ func find_new():
 	if ((posi2).distance_to(positio)) < 1536:
 		close_check = true
 	posi2 = positio
-	print(clas)
 	find_timer()
 
 
@@ -72,7 +71,6 @@ func find_timer():
 	$"../Timer".start()
 	run += 3
 	Global.bell += 1
-	print(run)
 
 
 func _on_eng_body_entered(body: Node2D) -> void:

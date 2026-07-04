@@ -47,7 +47,6 @@ func _process(delta: float) -> void:
 		Global.quick_up_down = false
 	
 	if black == true:
-		print('a')
 		$Camera2D/black.self_modulate.a += delta
 	
 	if Global.quick_black == false:

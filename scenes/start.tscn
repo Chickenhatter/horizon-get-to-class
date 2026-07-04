@@ -1986,6 +1986,35 @@ tile_set = SubResource("TileSet_7xrwy")
 [node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=745216253]
 zoom = Vector2(3, 3)
 
+[node name="Node2D" type="Node2D" parent="Node2D/Camera2D" unique_id=263452864]
+scale = Vector2(0.667, 0.667)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Camera2D/Node2D" unique_id=2059438146]
+self_modulate = Color(0.011764706, 0.011764706, 0.011764706, 1)
+position = Vector2(-664.5, 2.9802322e-05)
+scale = Vector2(1.506, 2.648)
+texture = ExtResource("2_u80x2")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Camera2D/Node2D" unique_id=63234815]
+self_modulate = Color(0.011764706, 0.011764706, 0.011764706, 1)
+position = Vector2(-142.99998, 412)
+rotation = 1.5707964
+scale = Vector2(1, 2.11)
+texture = ExtResource("2_u80x2")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D/Camera2D/Node2D" unique_id=2040928068]
+self_modulate = Color(0.011764706, 0.011764706, 0.011764706, 1)
+position = Vector2(-66, -412)
+rotation = 1.5707964
+scale = Vector2(1, 2.11)
+texture = ExtResource("2_u80x2")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D/Camera2D/Node2D" unique_id=351045627]
+self_modulate = Color(0.011764706, 0.011764706, 0.011764706, 1)
+position = Vector2(633.5, 3.7789345e-05)
+scale = Vector2(1.382, 2.6479998)
+texture = ExtResource("2_u80x2")
+
 [node name="Node2D2" type="Node2D" parent="Node2D" unique_id=489201868]
 position = Vector2(-3, -3)
 

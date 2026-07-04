@@ -11342,7 +11342,7 @@ texture = ExtResource("13_xtjcu")
 position = Vector2(-4, -8)
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D/camera/Camera2D/Node2D/Node2D" unique_id=289195164]
-position = Vector2(3, -5)
+position = Vector2(0, -8)
 texture = ExtResource("14_xtjcu")
 
 [node name="Node2D2" type="Node2D" parent="Node2D/camera/Camera2D/Node2D" unique_id=1819115525]
@@ -11409,6 +11409,35 @@ self_modulate = Color(0.22605214, 0.22605214, 0.22605214, 1)
 z_index = -1
 position = Vector2(476.00006, 236.99994)
 scale = Vector2(0.4160001, 0.36399937)
+texture = ExtResource("13_6pg8m")
+
+[node name="Node2D3" type="Node2D" parent="Node2D/camera/Camera2D" unique_id=1104175946]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/camera/Camera2D/Node2D3" unique_id=1485039826]
+self_modulate = Color(0.011764706, 0.011764706, 0.011764706, 1)
+position = Vector2(-664.5, 2.9802322e-05)
+scale = Vector2(1.506, 2.648)
+texture = ExtResource("13_6pg8m")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/camera/Camera2D/Node2D3" unique_id=1194069619]
+self_modulate = Color(0.011764706, 0.011764706, 0.011764706, 1)
+position = Vector2(-142.99998, 412)
+rotation = 1.5707964
+scale = Vector2(1, 2.11)
+texture = ExtResource("13_6pg8m")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D/camera/Camera2D/Node2D3" unique_id=975623387]
+self_modulate = Color(0.011764706, 0.011764706, 0.011764706, 1)
+position = Vector2(-66, -412)
+rotation = 1.5707964
+scale = Vector2(1, 2.11)
+texture = ExtResource("13_6pg8m")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D/camera/Camera2D/Node2D3" unique_id=1321832494]
+self_modulate = Color(0.011764706, 0.011764706, 0.011764706, 1)
+position = Vector2(633.5, 3.7789345e-05)
+scale = Vector2(1.382, 2.6479998)
 texture = ExtResource("13_6pg8m")
 
 [node name="map" type="Node2D" parent="Node2D" unique_id=29563524]

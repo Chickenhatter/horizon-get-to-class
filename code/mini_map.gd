@@ -10,7 +10,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	$Node2D.position.x = (Global.character_position.x)/34.08
 	$Node2D.position.y = (Global.character_position.y)/34.08
-	print(Global.clas)
 	if Global.clas == 'PE':
 		$Node2D2/pointer.global_position = $Node2D2/pe.global_position
 	if Global.clas == 'ENG':
